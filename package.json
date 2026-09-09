@@ -1,0 +1,10 @@
+{
+  "name": "answer-site",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node scripts/build.js" },
+  "devDependencies": {
+    "glob": "^10.3.10",
+    "fs-extra": "^11.2.0"
+  }
+}

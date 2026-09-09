@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<title>作业答案库</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-card">
+    <h3 id="modal-title">欢迎使用</h3>
+    <p class="author">作者：<strong>郝毅恒</strong></p>
+    <p class="contact">联系方式：<a href="mailto:haoyiheng@example.com">haoyiheng@example.com</a></p>
+    <button id="close-modal" class="btn-primary">进入网站</button>
+  </div>
+</div>
+
+<main id="app" class="hidden">
+  <header class="site-header">
+    <h1>作业答案库</h1>
+    <div class="search-row" role="search" aria-label="书目检索">
+      <input type="search" id="kw" placeholder="搜索书名、出版社…" aria-label="关键词"/>
+      <select id="grade" aria-label="年级"><option value="">全部年级</option></select>
+      <select id="semester" aria-label="学期"><option value="">全部学期</option><option value="上">上</option><option value="下">下</option></select>
+      <select id="subject" aria-label="科目"><option value="">全部科目</option><option>语文</option><option>数学</option><option>英语</option><option>科学</option></select>
+    </div>
+  </header>
+  <section id="list" class="book-grid" aria-live="polite"></section>
+</main>
+
+<dialog id="viewer" class="viewer">
+  <button class="viewer-close" aria-label="关闭">✕</button>
+  <div class="viewer-inner">
+    <button class="viewer-prev" aria-label="上一页">‹</button>
+    <img id="viewer-img" src="" alt=""/>
+    <button class="viewer-next" aria-label="下一页">›</button>
+  </div>
+  <div class="pagination" id="pagination"></div>
+</dialog>
+
+<script src="assets/app.js" type="module"></script>
+</body>
+</html>
