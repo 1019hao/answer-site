@@ -5,7 +5,7 @@ document.getElementById('close-modal').onclick = () => {
   initApp();
 };
 
-const REPO = 'haoyiheng/answer-site';                 // ★ 改成你的 user/repo
+const REPO = '1019hao/answer-site';                 // ★ 改成你的 user/repo
 const INDEX_URL = `https://raw.githubusercontent.com/${REPO}/data/search-index.json`;
 const IMG_BASE  = `https://raw.githubusercontent.com/${REPO}/main/books`;
 let books = [];
