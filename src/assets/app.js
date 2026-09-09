@@ -35,7 +35,15 @@ function render(filtered) {
   filtered.forEach(b => {
     const card = document.createElement('article');
     card.className = 'book-card';
-    card.innerHTML = `<h2>${b.name}</h2><p class="meta">${b.grade}年级 ${b.semester}学期 · ${b.subject} · ${b.publisher}</p>`;
+    const coverUrl = b.cover ? `${IMG_BASE}/${encodeURIComponent(b.name)}/pages/${b.cover}` : '';
+    card.innerHTML = `
+      <div class="book-cover">
+        ${coverUrl ? `<img src="${coverUrl}" alt="${b.name} 封面" loading="lazy"/>` : `<div class="placeholder">暂无封面</div>`}
+      </div>
+      <div class="book-info">
+        <h2>${b.name}</h2>
+        <p class="meta">${b.grade}年级 ${b.semester}学期 · ${b.subject} · ${b.publisher}</p>
+      </div>`;
     card.onclick = () => openViewer(b.name);
     listEl.appendChild(card);
   });

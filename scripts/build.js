@@ -38,7 +38,8 @@ async function main() {
       grade: meta.grade,
       semester: meta.semester,
       subject: meta.subject,
-      publisher: meta.publisher || ''
+      publisher: meta.publisher || '',
+      cover: files[0] || ''
     });
   }
 
